@@ -1,3 +1,10 @@
+describe('Open Gallery Test', function () {
+  it('Checks if first slide contains Rome"', function () {
+    cy.visit('http://localhost:3000');
+    cy.get('.swiper-slide-active').should('contain', 'Rome');
+  });
+});
+
 describe('Swiper Gallery Test', function () {
   it('Checks if second slide contains "United Kingdom"', function () {
     cy.visit('http://localhost:3000');
@@ -6,7 +13,7 @@ describe('Swiper Gallery Test', function () {
   });
 });
 
-describe('Swiper Gallery Test', function () {
+describe('Twice Swiper Gallery Test', function () {
   it('Checks if third slide contains "Paris"', function () {
     cy.visit('http://localhost:3000');
     cy.get('.swiper-button-next').click();
